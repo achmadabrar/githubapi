@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GithubApi</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_wait">Please wait . . .</string>
+    <string name="not_found">Yah, data tidak ada</string>
+    <string name="favorite_empty">Tidak ada favorite user</string>
+    <string name="favorite">Favorite</string>
+    <string name="setting">Setting</string>
+    <string name="set_one_time_alarm">one time alarm</string>
+    <string name="cancel_alarm">cancel alarm</string>
+    <string name="set_repeating_alarm">set repeating alarm</string>
+    <string name="alarm_message">Pesan Alarm</string>
+    <string name="alarm_time">Waktu Alarm</string>
+    <string name="alarm_date">Tanggal alarm</string>
+    <string name="one_time_alarm">One Time Alarm</string>
+    <string name="repeating_alarm">Repeating Alarm</string>
+    <string name="type_github_user_name">Ketik Username</string>
+</resources>

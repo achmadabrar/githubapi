@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activity.SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_settings"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/toolbar_color"
+        style="@style/ToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_one_time_alarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_settings"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/one_time_alarm"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btn_once_date"
+        style="@style/Base.Widget.AppCompat.ImageButton"
+        app:layout_constraintStart_toStartOf="@id/tv_one_time_alarm"
+        app:layout_constraintTop_toBottomOf="@id/tv_one_time_alarm"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_date_range_black" />
+
+    <TextView
+        android:id="@+id/tv_once_date"
+        app:layout_constraintStart_toEndOf="@id/btn_once_date"
+        app:layout_constraintTop_toTopOf="@id/btn_once_date"
+        app:layout_constraintBottom_toBottomOf="@id/btn_once_date"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_date" />
+
+    <ImageButton
+        android:id="@+id/btn_once_time"
+        app:layout_constraintTop_toBottomOf="@id/btn_once_date"
+        app:layout_constraintStart_toStartOf="@id/btn_once_date"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_access_time_black" />
+
+    <TextView
+        android:id="@+id/tv_once_time"
+        app:layout_constraintStart_toEndOf="@id/btn_once_time"
+        app:layout_constraintTop_toTopOf="@id/btn_once_time"
+        app:layout_constraintBottom_toBottomOf="@id/btn_once_time"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_time" />
+
+    <EditText
+        android:id="@+id/edt_once_message"
+        app:layout_constraintStart_toStartOf="@id/btn_once_time"
+        app:layout_constraintTop_toBottomOf="@id/btn_once_time"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/alarm_message"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_set_once_alarm"
+        app:layout_constraintTop_toBottomOf="@id/edt_once_message"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/toolbar_color"
+        android:text="@string/set_one_time_alarm" />
+
+    <TextView
+        android:id="@+id/tv_title_once_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/btn_once_time"
+        app:layout_constraintTop_toBottomOf="@id/btn_set_once_alarm"
+        android:padding="16dp"
+        android:text="@string/repeating_alarm"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btn_repeating_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_once_time"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_access_time_black" />
+
+    <TextView
+        android:id="@+id/tv_repeating_time"
+        app:layout_constraintStart_toEndOf="@id/btn_repeating_time"
+        app:layout_constraintTop_toTopOf="@id/btn_repeating_time"
+        app:layout_constraintBottom_toBottomOf="@id/btn_repeating_time"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_time" />
+
+    <EditText
+        android:id="@+id/edt_repeating_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_repeating_time"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/alarm_message"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_cancel_repeating_alarm"
+        app:layout_constraintTop_toBottomOf="@id/edt_repeating_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_set_repeating_alarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:backgroundTint="@color/toolbar_color"
+        android:layout_weight="0.5"
+        android:text="@string/cancel_alarm" />
+
+    <Button
+        android:id="@+id/btn_set_repeating_alarm"
+        app:layout_constraintTop_toBottomOf="@id/edt_repeating_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel_repeating_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_marginLeft="12dp"
+        android:backgroundTint="@color/toolbar_color"
+        android:text="@string/set_repeating_alarm"
+        android:layout_marginStart="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
